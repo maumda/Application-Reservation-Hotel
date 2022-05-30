@@ -1,0 +1,65 @@
+<! DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset = "UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                                       
+                                                       
+    <title>Aopplication Réservation d'hôtel</title>
+    
+  </head>
+  
+  <body>
+    <form action="destination.html" method="post">       <!--methode get juste demander des infos ds le serveur - methode post pour modifier -->
+        <fieldset>
+            <legend>Informations personnelles : </legend>
+            <label for="name">Prenom Utilisateur : </label>
+            <input type="text" id="name" required autofocus placeholder="Votre prenom" title="Entrez plus de trois lettres" pattern="[a-zA-Z]{3,}">
+            
+            <label for="email">Email Utilisateur : </label>
+            <input type="text" id="email" required placeholder="Votre email" title="Entrez une adresse email valide" pattern="[a-zA-Z]{3,}@[a-zA-Z]{3,}[.][a-zA-Z]{3,}">
+            
+            <label for="phone">Numero de téléphone : </label>
+            <input type="text" id="phone" required placeholder="Votre numero téléphone" title="Entrez un numero de telephone valide : ### ### ####" pattern="[0-9]{3} [0-9]{3} [0-9]{4}">
+            
+            <select name="pays" required>
+                 <option value="CA">Canada</option>
+                 <option value="US">United States of America</option>
+                 <option value="MX">México</option>
+                 <option value="SP">España</option>
+                 <option value="HL">Holland</option>
+                 <option value="FR">France</option>
+                 <option value="CH">China</option>
+            </select>
+        </fieldset>
+        <br>
+        
+        <fieldset>
+            <legend>Détails de réservation : </legend>
+            <label for="date">Date de réservation</label>
+            <input type="date" id="date" required min="2022-01-01">
+
+            <label for="nomvisiteur">Nombre de visiteurs: </label>
+            <input type="number" id="nomvisiteur" required min="1" max="5" name="nomvisiteur">
+            <p>Est-ce que vous commandez des repas ? </p>
+
+            
+            <label for="repas">Oui</label>
+            <input type="radio" id="repas" required name="repas">
+            <label for="norepas">No</label>
+            <input type="radio" id="norepas" required name="repas">
+            <br>
+        
+            
+            <label for="terrase">Est-ce que vous voulez une terrase ? </label>
+            <input type="checkbox" id="terrase" required name="terrase" checked>
+            <br>
+            <input type=image src=submit.png alt="Bouton Confirmer" height="140" width="160">   
+        </fieldset>
+        
+      </form>
+  </body>
+</html>
+
+
